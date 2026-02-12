@@ -1,8 +1,13 @@
 cask "lunarbar" do
-  version "1.8.3"
-  sha256 "18915b2881ffeff766f9708076101f5b15629d2ab42ddc0ef9a6494de6332f11"
+  arch arm: "-apple-silicon", intel: ""
 
-  url "https://github.com/LunarBar-app/LunarBar/releases/download/v#{version}/LunarBar-#{version}.dmg"
+  version "1.8.3"
+  
+  sha256 arm:   "b3724e705027349b4ace0c38ce050c4361b4f908f224a2947d2db563e67cabbd",
+         intel: "18915b2881ffeff766f9708076101f5b15629d2ab42ddc0ef9a6494de6332f11"
+
+  url "https://github.com/LunarBar-app/LunarBar/releases/download/v#{version}/LunarBar-#{version}#{arch}.dmg"
+  
   name "LunarBar"
   desc "Lunar calendar for menu bar"
   homepage "https://github.com/LunarBar-app/LunarBar"
